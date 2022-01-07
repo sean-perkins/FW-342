@@ -1,0 +1,7 @@
+{
+  "name": "rd-virtual-scroll",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
