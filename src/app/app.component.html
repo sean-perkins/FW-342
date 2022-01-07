@@ -1,3 +1,17 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-content>
+    <ion-refresher slot="fixed" (ionRefresh)="onRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+    <cdk-virtual-scroll-viewport itemSize="56" minBufferPx="900" maxBufferPx="1350">
+      <ion-list>
+        <ion-item *cdkVirtualFor="let item of items">
+          <ion-avatar slot="start">
+            <img src="https://loremflickr.com/40/40" />
+          </ion-avatar>
+          <ion-label>{{ item }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </cdk-virtual-scroll-viewport>
+  </ion-content>
 </ion-app>
